@@ -11,6 +11,7 @@
         <module name="clark-supplier-interface" />
         <module name="clark-consumer-entity" />
         <module name="clark-common-entity" />
+        <module name="clark-config-server" />
         <module name="clark-consumer-impl" />
         <module name="clark-resttemplate-impl" />
         <module name="clark-supplier-entity" />
@@ -22,6 +23,7 @@
       <module name="clark-api-impl" target="11" />
       <module name="clark-api-interface" target="11" />
       <module name="clark-common-entity" target="11" />
+      <module name="clark-config-server" target="11" />
       <module name="clark-consumer-entity" target="11" />
       <module name="clark-consumer-impl" target="11" />
       <module name="clark-consumer-interface" target="11" />
@@ -37,6 +39,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="clark-api-impl" options="-parameters" />
       <module name="clark-common-entity" options="-parameters" />
+      <module name="clark-config-server" options="-parameters" />
       <module name="clark-consumer-entity" options="-parameters" />
       <module name="clark-consumer-impl" options="-parameters" />
       <module name="clark-consumer-interface" options="-parameters" />

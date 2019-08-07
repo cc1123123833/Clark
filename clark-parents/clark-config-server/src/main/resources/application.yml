@@ -1,0 +1,22 @@
+###服务启动端口号
+server:
+  port: 9004
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: clark-config-server
+  #github配置中心
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cc1123123833/Clark-Config.git
+          search-paths: 'Config'
+      label: master
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
+    register-with-eureka: true
+    fetch-registry: true

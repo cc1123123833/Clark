@@ -12,6 +12,7 @@
         <module>clark-api-impl</module>
         <module>clark-api-interface</module>
         <module>clark-api-entity</module>
+        <module>clark-config-server</module>
     </modules>
 
     <!--父工程设置-->
