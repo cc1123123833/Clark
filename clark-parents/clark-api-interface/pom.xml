@@ -13,4 +13,16 @@
 
     <!--父工程设置-->
     <packaging>pom</packaging>
+    <modules>
+        <module>clark-supplier-interface</module>
+    </modules>
+
+    <dependencies>
+        <!--springmvc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

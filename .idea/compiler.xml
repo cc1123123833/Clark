@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="clarksupplierimpl" />
+        <module name="clark-register" />
+        <module name="clark-supplier-entity" />
+        <module name="clark-supplier-interface" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="clark-api-entity" target="11" />
+      <module name="clark-api-impl" target="11" />
+      <module name="clark-api-interface" target="11" />
+      <module name="clark-parents" target="11" />
+      <module name="clark-register" target="11" />
+      <module name="clark-supplier-entity" target="11" />
+      <module name="clark-supplier-interface" target="11" />
+      <module name="clarksupplierimpl" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clark-api-impl" options="-parameters" />
+      <module name="clark-register" options="-parameters" />
+      <module name="clark-supplier-entity" options="-parameters" />
+      <module name="clark-supplier-interface" options="-parameters" />
+      <module name="clarksupplierimpl" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -13,4 +13,7 @@
 
     <!--父工程设置-->
     <packaging>pom</packaging>
+    <modules>
+        <module>clark-supplier-entity</module>
+    </modules>
 </project>

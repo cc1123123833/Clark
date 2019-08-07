@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-entity/clark-api-entity.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-entity/clark-api-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-api-impl.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-api-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-api-interface.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-api-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-parents.iml" filepath="$PROJECT_DIR$/clark-parents/clark-parents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-register/clark-register.iml" filepath="$PROJECT_DIR$/clark-parents/clark-register/clark-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clarksupplierimpl.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clarksupplierimpl.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: clark-register
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    ##注册中心是否需要注册，单机false 集群true
+    register-with-eureka: false
+    ##是否需要检索服务信息false
+    fetch-registry: false
