@@ -1,5 +1,6 @@
 package com.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.common.entity.InputParam;
 import com.common.entity.OutputParam;
 import io.swagger.annotations.Api;
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,8 +39,10 @@ public class HelloWorldServiceImpl {
     public OutputParam helloWorld(@RequestBody InputParam param)
     {
         var url="http://clark-supplier/helloWorld";
-        var result = restTemplate.getForObject(url,OutputParam.class,param);
-        return result;
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, param, String.class);
+        String body = responseEntity.getBody();
+        OutputParam outputParam = JSONObject.parseObject(body, OutputParam.class);
+        return outputParam;
     }
 
     @PostMapping("/singleClient")

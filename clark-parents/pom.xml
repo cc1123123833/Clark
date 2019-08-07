@@ -32,6 +32,7 @@
         <jaxb.version>2.3.1</jaxb.version>
         <swagger2.version>2.9.2</swagger2.version>
         <hystrix.version>1.4.7.RELEASE</hystrix.version>
+        <fastjson.version>1.2.59</fastjson.version>
     </properties>
 
     <!--公用配置-->
@@ -47,6 +48,13 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
         <!-- jaxb模块引用 - start -->
