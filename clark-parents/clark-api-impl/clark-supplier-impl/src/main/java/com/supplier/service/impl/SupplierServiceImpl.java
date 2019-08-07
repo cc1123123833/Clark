@@ -8,11 +8,15 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Api("supplier测试demo")
 public class SupplierServiceImpl implements ISupplierService {
+
+    @Value("${clarkConfigName}")
+    private String clarkConfigName;
 
     @Override
     @ApiOperation(value="helloWorld", notes="helloWorld")
@@ -29,5 +33,11 @@ public class SupplierServiceImpl implements ISupplierService {
     {
         var error = OutputParam.builder().age(250).name("clark-supplier").build();
         return error;
+    }
+
+    @Override
+    @ApiOperation(value="getClarkConfigName", notes="getClarkConfigName")
+    public String getClarkConfigName() {
+        return clarkConfigName;
     }
 }

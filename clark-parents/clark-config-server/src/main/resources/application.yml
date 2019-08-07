@@ -10,7 +10,9 @@ spring:
     config:
       server:
         git:
+          #gitHub配置文件仓库地址
           uri: https://github.com/cc1123123833/Clark-Config.git
+          #gitHub配置文件仓库中配置文件夹
           search-paths: 'Config'
       label: master
 ###服务注册到eureka地址

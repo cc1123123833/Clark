@@ -1,0 +1,23 @@
+###服务启动端口号
+server:
+  port: 9001
+spring:
+  application:
+    #配置服务名
+    name: clark-supplier
+  cloud:
+    config:
+      #配置文件所属环境(配置文件命名:服务名-环境)
+      profile: dev
+      discovery:
+        #配置中心application.name
+        service-id: clark-config-server
+        enabled: true
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
+    register-with-eureka: true
+    fetch-registry: true
