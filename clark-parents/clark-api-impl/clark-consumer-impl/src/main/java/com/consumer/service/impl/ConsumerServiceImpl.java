@@ -10,11 +10,15 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Api("consumer测试demo")
 public class ConsumerServiceImpl implements IConsumerService {
+
+    @Value("${clarkConfigName}")
+    private String clarkConfigName;
 
     @Autowired
     private SupplierFegin supplierFegin;
@@ -32,5 +36,11 @@ public class ConsumerServiceImpl implements IConsumerService {
     public OutputParam helloWorldFallBack(InputParam param) {
         var error = OutputParam.builder().age(250).name("clark-consumer").build();
         return error;
+    }
+
+    @Override
+    @ApiOperation(value="getClarkConfigName", notes="getClarkConfigName")
+    public String getClarkConfigName() {
+        return clarkConfigName;
     }
 }

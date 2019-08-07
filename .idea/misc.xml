@@ -9,6 +9,11 @@
         <option value="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-consumer-impl/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-common-interface/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />

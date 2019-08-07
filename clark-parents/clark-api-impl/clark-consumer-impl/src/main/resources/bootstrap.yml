@@ -5,6 +5,15 @@ server:
 spring:
   application:
     name: clark-consumer
+  cloud:
+    config:
+      #配置文件所属环境(配置文件命名:服务名-环境)
+      profile: dev
+      discovery:
+        #配置中心application.name
+        service-id: clark-config-server
+        enabled: true
+
 ###服务注册到eureka地址
 eureka:
   client:
@@ -12,18 +21,3 @@ eureka:
       defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
     register-with-eureka: true
     fetch-registry: true
-
-#feign超时配置
-ribbon:
-  # 连接超时
-  ConnectTimeout: 5000
-  # 响应超时
-  ReadTimeout: 5000
-
-#配置hystrix超时
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false

@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-resttemplate-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clark-parents/clark-api-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-common-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-consumer-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/clark-parents/clark-config-server" charset="UTF-8" />
