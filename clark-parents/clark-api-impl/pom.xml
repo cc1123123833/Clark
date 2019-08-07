@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>clark-supplier-impl</module>
+        <module>clark-consumer-impl</module>
     </modules>
 
     <!--公共配置-->

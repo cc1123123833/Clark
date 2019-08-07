@@ -3,19 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>clark-api-entity</artifactId>
+        <artifactId>clark-api-impl</artifactId>
         <groupId>com.clark.cloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>clark-supplier-entity</artifactId>
+    <artifactId>clark-consumer-impl</artifactId>
 
-    <!--引入公共entity-->
     <dependencies>
+        <!--引入consumer接口-->
         <dependency>
             <groupId>com.clark.cloud</groupId>
-            <artifactId>clark-common-entity</artifactId>
+            <artifactId>clark-consumer-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--引入supplier接口-->
+        <dependency>
+            <groupId>com.clark.cloud</groupId>
+            <artifactId>clark-supplier-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

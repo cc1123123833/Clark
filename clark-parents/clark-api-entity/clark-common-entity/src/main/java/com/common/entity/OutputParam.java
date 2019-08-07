@@ -1,12 +1,11 @@
-package com.supplier.entity;
+package com.common.entity;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder(toBuilder = true)
-public class InputParam {
-
+public class OutputParam {
     private String name;
     private Integer age;
 }

@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/clarkparents/pom.xml" />
         <option value="$PROJECT_DIR$/clark-parents/pom.xml" />
         <option value="$PROJECT_DIR$/clark-parents/clark-api-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-consumer-impl/pom.xml" />
       </list>
     </option>
   </component>
