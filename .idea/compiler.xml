@@ -12,6 +12,7 @@
         <module name="clark-consumer-entity" />
         <module name="clark-common-entity" />
         <module name="clark-consumer-impl" />
+        <module name="clark-resttemplate-impl" />
         <module name="clark-supplier-entity" />
         <module name="clark-supplier-impl" />
       </profile>
@@ -26,6 +27,7 @@
       <module name="clark-consumer-interface" target="11" />
       <module name="clark-parents" target="11" />
       <module name="clark-register" target="11" />
+      <module name="clark-resttemplate-impl" target="11" />
       <module name="clark-supplier-entity" target="11" />
       <module name="clark-supplier-impl" target="11" />
       <module name="clark-supplier-interface" target="11" />
@@ -39,6 +41,7 @@
       <module name="clark-consumer-impl" options="-parameters" />
       <module name="clark-consumer-interface" options="-parameters" />
       <module name="clark-register" options="-parameters" />
+      <module name="clark-resttemplate-impl" options="-parameters" />
       <module name="clark-supplier-entity" options="-parameters" />
       <module name="clark-supplier-impl" options="-parameters" />
       <module name="clark-supplier-interface" options="-parameters" />

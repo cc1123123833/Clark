@@ -15,6 +15,7 @@
     <modules>
         <module>clark-supplier-impl</module>
         <module>clark-consumer-impl</module>
+        <module>clark-resttemplate-impl</module>
     </modules>
 
     <!--公共配置-->

@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-consumer-interface/clark-consumer-interface.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-consumer-interface/clark-consumer-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-parents.iml" filepath="$PROJECT_DIR$/clark-parents/clark-parents.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-register/clark-register.iml" filepath="$PROJECT_DIR$/clark-parents/clark-register/clark-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-resttemplate-impl/clark-resttemplate-impl.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-resttemplate-impl/clark-resttemplate-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clark-supplier-impl.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clark-supplier-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" />
