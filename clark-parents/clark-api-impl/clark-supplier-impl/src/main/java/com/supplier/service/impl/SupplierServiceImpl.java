@@ -2,6 +2,8 @@ package com.supplier.service.impl;
 
 import com.common.entity.InputParam;
 import com.common.entity.OutputParam;
+import com.common.view.ReturnCode;
+import com.common.view.ReturnView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.supplier.service.ISupplierService;
 import io.swagger.annotations.Api;
@@ -23,21 +25,17 @@ public class SupplierServiceImpl implements ISupplierService {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "param", value = "输入参数", required = true, dataType = "InputParam")
     })
-    @HystrixCommand(fallbackMethod = "helloWorldFallBack")
-    public OutputParam helloWorld(InputParam param) {
+    public ReturnView helloWorld(InputParam param) {
         var clark = OutputParam.builder().age(18).name("clark").build();
-        return clark;
+        ReturnView build = ReturnView.builder().code(ReturnCode.SUCCESS.val()).message(ReturnCode.SUCCESS.msg()).data(clark).build();
+        return build;
     }
 
-    public OutputParam helloWorldFallBack(InputParam param)
-    {
-        var error = OutputParam.builder().age(250).name("clark-supplier").build();
-        return error;
-    }
 
     @Override
     @ApiOperation(value="getClarkConfigName", notes="getClarkConfigName")
-    public String getClarkConfigName() {
-        return clarkConfigName;
+    public ReturnView getClarkConfigName() {
+        ReturnView build = ReturnView.builder().code(ReturnCode.SUCCESS.val()).message(ReturnCode.SUCCESS.msg()).data(clarkConfigName).build();
+        return build;
     }
 }

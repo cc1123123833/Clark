@@ -2,6 +2,7 @@ package com.consumer.service;
 
 import com.common.entity.InputParam;
 import com.common.entity.OutputParam;
+import com.common.view.ReturnView;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface IConsumerService{
 
     @GetMapping("/clarkConfigName")
-    String getClarkConfigName();
+    ReturnView getClarkConfigName();
 
     @PostMapping("/helloWorld")
-    OutputParam helloWorld(@RequestBody InputParam param);
+    ReturnView helloWorld(@RequestBody InputParam param);
 }
