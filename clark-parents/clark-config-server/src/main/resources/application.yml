@@ -15,6 +15,20 @@ spring:
           #gitHub配置文件仓库中配置文件夹
           search-paths: 'Config'
       label: master
+    #消息总线配置
+    #webhook 刷新命令curl -v -X POST http://localhost:9004/actuator/bus-refresh
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+      refresh:
+        enabled: true  #开启总线消息更新功能
+  #配置ribbtmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 ###服务注册到eureka地址
 eureka:
   client:
@@ -22,3 +36,13 @@ eureka:
       defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
     register-with-eureka: true
     fetch-registry: true
+
+##监控中心
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
