@@ -22,7 +22,8 @@ spring:
       trace:
         enabled: true
       refresh:
-        enabled: true  #开启总线消息更新功能
+        #开启总线消息更新功能
+        enabled: true
   #配置ribbtmq
   rabbitmq:
     host: localhost
