@@ -21,3 +21,12 @@ eureka:
       defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
     register-with-eureka: true
     fetch-registry: true
+##监控中心
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

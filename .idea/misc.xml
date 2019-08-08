@@ -11,6 +11,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-common-impl/pom.xml" />
         <option value="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-common-interface/pom.xml" />
       </set>
     </option>

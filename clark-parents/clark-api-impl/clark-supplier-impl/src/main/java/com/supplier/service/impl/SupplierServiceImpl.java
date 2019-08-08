@@ -4,21 +4,21 @@ import com.common.entity.InputParam;
 import com.common.entity.OutputParam;
 import com.common.view.ReturnCode;
 import com.common.view.ReturnView;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.supplier.config.BaseConfig;
 import com.supplier.service.ISupplierService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Api("supplier测试demo")
 public class SupplierServiceImpl implements ISupplierService {
 
-    @Value("${clarkConfigName}")
-    private String clarkConfigName;
+    @Autowired
+    private BaseConfig baseConfig;
 
     @Override
     @ApiOperation(value="helloWorld", notes="helloWorld")
@@ -35,7 +35,7 @@ public class SupplierServiceImpl implements ISupplierService {
     @Override
     @ApiOperation(value="getClarkConfigName", notes="getClarkConfigName")
     public ReturnView getClarkConfigName() {
-        ReturnView build = ReturnView.builder().code(ReturnCode.SUCCESS.val()).message(ReturnCode.SUCCESS.msg()).data(clarkConfigName).build();
+        ReturnView build = ReturnView.builder().code(ReturnCode.SUCCESS.val()).message(ReturnCode.SUCCESS.msg()).data(baseConfig.getClarkConfigName()).build();
         return build;
     }
 }
