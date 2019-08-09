@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: clark-zuul
+  cloud:
+    config:
+      #配置文件所属环境(配置文件命名:服务名-环境)
+      profile: dev
+      discovery:
+        #配置中心application.name
+        service-id: clark-config-server
+        enabled: true
+server:
+  port: 80
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+##监控中心
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
