@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="clark-supplier-entity" />
-        <module name="clark-config-server" />
         <module name="clark-consumer-interface" />
-        <module name="clark-consumer-impl" />
+        <module name="clark-consumer-entity" />
+        <module name="clark-zuul" />
+        <module name="clark-supplier-interface" />
         <module name="clark-common-entity" />
+        <module name="clark-config-server" />
         <module name="clark-register" />
         <module name="clark-resttemplate-impl" />
-        <module name="clark-consumer-entity" />
+        <module name="clark-supplier-entity" />
         <module name="clark-supplier-impl" />
-        <module name="clark-supplier-interface" />
+        <module name="clark-consumer-impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +36,7 @@
       <module name="clark-supplier-entity" target="11" />
       <module name="clark-supplier-impl" target="11" />
       <module name="clark-supplier-interface" target="11" />
+      <module name="clark-zuul" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -52,6 +54,7 @@
       <module name="clark-supplier-entity" options="-parameters" />
       <module name="clark-supplier-impl" options="-parameters" />
       <module name="clark-supplier-interface" options="-parameters" />
+      <module name="clark-zuul" options="-parameters" />
     </option>
   </component>
 </project>

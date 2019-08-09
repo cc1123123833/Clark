@@ -21,6 +21,13 @@ public class SupplierServiceImpl implements ISupplierService {
     private BaseConfig baseConfig;
 
     @Override
+    @ApiOperation(value = "index",notes = "index")
+    public ReturnView index() {
+        ReturnView returnView = ReturnView.builder().code(ReturnCode.SUCCESS.val()).message("欢迎来到consumer").build();
+        return returnView;
+    }
+
+    @Override
     @ApiOperation(value="helloWorld", notes="helloWorld")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "param", value = "输入参数", required = true, dataType = "InputParam")

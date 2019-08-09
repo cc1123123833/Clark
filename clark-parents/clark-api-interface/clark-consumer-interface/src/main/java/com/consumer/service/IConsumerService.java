@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface IConsumerService{
 
+    @GetMapping("/")
+    ReturnView index();
+
     @GetMapping("/clarkConfigName")
     ReturnView getClarkConfigName();
 

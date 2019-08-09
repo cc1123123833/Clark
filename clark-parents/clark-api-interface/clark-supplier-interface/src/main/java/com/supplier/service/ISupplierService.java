@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface ISupplierService{
 
+    @GetMapping("/")
+    ReturnView index();
+
     @GetMapping("/clarkConfigName")
     ReturnView getClarkConfigName();
 

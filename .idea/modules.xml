@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-entity/clark-supplier-entity/clark-supplier-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clark-supplier-impl.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-impl/clark-supplier-impl/clark-supplier-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" filepath="$PROJECT_DIR$/clark-parents/clark-api-interface/clark-supplier-interface/clark-supplier-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clark-parents/clark-zuul/clark-zuul.iml" filepath="$PROJECT_DIR$/clark-parents/clark-zuul/clark-zuul.iml" />
     </modules>
   </component>
 </project>

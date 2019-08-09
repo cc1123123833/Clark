@@ -9,6 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class SupplierFeginFallBack implements SupplierFegin {
     @Override
+    public ReturnView index() {
+        ReturnView build = ReturnView.builder().code(ReturnCode.FAIL.val()).message(ReturnCode.FAIL.msg()).build();
+        return build;
+    }
+
+    @Override
     public ReturnView getClarkConfigName() {
         ReturnView build = ReturnView.builder().code(ReturnCode.FAIL.val()).message(ReturnCode.FAIL.msg()).build();
         return build;
