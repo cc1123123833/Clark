@@ -26,7 +26,7 @@ spring:
         enabled: true
   #配置ribbtmq
   rabbitmq:
-    host: localhost
+    host: http://192.168.224.134
     port: 5672
     username: guest
     password: guest
