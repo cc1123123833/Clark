@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>clark-register</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <!--注册中心-->
     <dependencies>
@@ -18,4 +19,47 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <!--jar名称-->
+        <finalName>clark-register</finalName>
+        <plugins>
+            <!--maven插件-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- docker-maven-plugin依赖spring-boot-maven-plugin-->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.2.0</version>
+                <configuration>
+                    <!--覆盖相同镜像-->
+                    <forceTags>true</forceTags>
+                    <!--docker服务器-->
+                    <dockerHost>${dockerHost.url}</dockerHost>
+                    <!--阿里镜像仓库用户名密码在maven中配置-->
+                    <serverId>${serverId.maven}</serverId>
+                    <!--上传到阿里镜像仓库的镜像-->
+                    <imageName>registry.cn-beijing.aliyuncs.com/clark-spring-cloud/${project.artifactId}:${project.version}</imageName>
+                    <!--基础镜像docker file FROM-->
+                    <baseImage>myjdk:11</baseImage>
+                    <!--docker file entrypoint-->
+                    <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
+                    <!--配置打包的资源文件-->
+                    <resources>
+                        <resource>
+                            <!--指定要复制的路径 /当前路径-->
+                            <targetPath>/</targetPath>
+                            <!--当前路径下的target目录-->
+                            <directory>${project.build.directory}</directory>
+                            <!--指定生成的包名-->
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

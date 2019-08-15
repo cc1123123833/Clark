@@ -1,13 +1,39 @@
 spring:
   application:
     name: clark-register
+---
+spring:
+  profiles: peer1
 server:
   port: 8001
 eureka:
   instance:
-    hostname: localhost
+    hostname: clark-register-peer1
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
+    serviceUrl:
+      defaultZone: http://clark-register-peer2:8002/eureka/
     ##注册中心是否需要注册，单机false 集群true
-    register-with-eureka: false
+    register-with-eureka: true
     ##是否需要检索服务信息false
-    fetch-registry: false
+    fetch-registry: true
+---
+spring:
+  profiles: peer2
+server:
+  port: 8002
+eureka:
+  instance:
+    hostname: clark-register-peer2
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+  client:
+    serviceUrl:
+      defaultZone: http://clark-register-peer1:8001/eureka/
+    ##注册中心是否需要注册，单机false 集群true
+    register-with-eureka: true
+    ##是否需要检索服务信息false
+    fetch-registry: true
+---

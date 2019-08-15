@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  clark-register-peer1:
+    container_name: clark-register-peer1
+    hostname: clark-register-peer1
+    networks:
+      - clark-net
+    image: registry.cn-beijing.aliyuncs.com/clark-spring-cloud/clark-register:1.0-SNAPSHOT
+    ports:
+      - "8001:8001"
+    environment:
+      - spring.profiles.active=peer1
+  clark-register-peer2:
+    container_name: clark-register-peer2
+    hostname: clark-register-peer2
+    networks:
+      - clark-net
+    image: registry.cn-beijing.aliyuncs.com/clark-spring-cloud/clark-register:1.0-SNAPSHOT
+    ports:
+      - "8002:8002"
+    environment:
+      - spring.profiles.active=peer2
+networks:
+  clark-net:
+    driver: bridge
