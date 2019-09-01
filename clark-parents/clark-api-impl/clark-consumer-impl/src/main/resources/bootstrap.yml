@@ -13,12 +13,19 @@ spring:
         #配置中心application.name
         service-id: clark-config-server
         enabled: true
+  zipkin:
+    base-url: http://192.168.224.134:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
 
 ###服务注册到eureka地址
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8001/eureka,http://localhost:8002/eureka
+      defaultZone: http://clark-register-peer1:8001/eureka,http://clark-register-peer2:8002/eureka
     register-with-eureka: true
     fetch-registry: true
 
